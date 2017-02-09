@@ -30,7 +30,7 @@ public class ServerData {
         return listSockets;
     }
 
-    public void Log(String type, String client, String request, String response){
+    public synchronized void Log(String type, String client, String request, String response){
         File log = new File("log.xml");
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
